@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Archit K. Mehta - Homoeopathic Psychiatric Clinic</title>
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header, main, footer {
+            padding: 20px;
+        }
+        header {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+        }
+        nav {
+            background-color: #4169e1;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0000cd;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #00008b;
+        }
+        h2 {
+            color: #1e90ff;
+        }
+         
+         #appointment {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #appointment img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px;
+            margin-bottom: 15px;
+        }
+
+        .appointment-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .appointment-button {
+            flex: 1;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .book-appointment {
+            background-color: #0000cd;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .book-appointment:hover {
+            background-color: #00008b;
+        }
+
+        .tele-consultation {
+            background-color: #1e90ff;
+            color: white;
+            margin-left: 10px;
+        }
+
+        .tele-consultation:hover {
+            background-color: #1c86ee;
+        }
+
+        @media (max-width: 768px) {
+            .appointment-buttons {
+                flex-direction: column;
+            }
+
+            .appointment-button {
+                margin: 10px 0;
+            }
+
+            .book-appointment {
+                margin-right: 0;
+            }
+
+            .tele-consultation {
+                margin-left: 0;
+            }
+        }
+        #address {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        #address a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        #address a:hover {
+            text-decoration: underline;
+        }
+        #mental-health-articles {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .article-card {
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        .article-card h3 {
+            color: #1e90ff;
+            margin-top: 0;
+        }
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        .article-content {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+        }
+       #publications {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#publications h2 {
+    color: #1e90ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#publications > p {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.article-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.article-card h3 {
+    color: #1e90ff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.article-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.article-card > p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.article-card .read-more {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.article-card .read-more:hover {
+    text-decoration: underline;
+}
+
+.article-content {
+    display: none;
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.article-content ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.article-content .external-link {
+    display: inline-block;
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.article-content .external-link:hover {
+    background-color: #1a7ee0;
+}
+
+@media (max-width: 768px) {
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+function toggleArticle(element) {
+    var content = element.nextElementSibling;
+    if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+        element.textContent = "Read Less";
+    } else {
+        content.style.display = "none";
+        element.textContent = "Read More";
+    }
+}
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://lh3.googleusercontent.com/a-/ALV-UjVqObjqIVxUsWsAUvT5oSwDNcd4Snn5FMz4fMTEGp-T9tgikZk=s265-w265-h265" alt="Dr. Archit K. Mehta">
+        <h1>Dr. Archit K. Mehta</h1>
+        <p>Homoeopathic Psychiatric Clinic</p>
+    </header>
+    
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#appointment">Appointment</a>
+        <a href="#address">Location</a>
+        <a href="#mental-health-articles">Mental Health Resources</a>
+        <a href="#publications">Publications</a>
+        <a href="#app">Clinic App</a>
+
+    </nav>
+    
+    <main>
+       <section id="about">
+            <h2>About Dr. Archit Mehta</h2>
+            <p>Dr. Archit Mehta is a dedicated and experienced psychiatrist specializing in Child & Adolescent Mental and Behavioral Disorders. With a passion for helping young patients, Dr. Mehta has developed a comprehensive approach to mental health care that integrates clinical expertise with a deep understanding of developmental psychology. His practice focuses on providing personalized, compassionate care that empowers children, adolescents, and their families.</p>
+            <p>Dr. Mehta is committed to staying at the forefront of psychiatric innovation, utilizing evidence-based practices to diagnose and treat a wide range of mental health conditions. His mission is to create a safe, supportive environment where patients feel heard and understood.</p>
+            <p>As a thought leader in his field, Dr. Mehta also contributes to the wider medical community through his website, offering resources and guidance for healthcare professionals to enhance their skills in diagnosing and managing mental health disorders in children and adolescents.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <h3>Homoeopathy</h3>
+            <div class="service-section">
+                <img src="https://i.pinimg.com/564x/07/29/02/0729025711c492051062bcb688a062bc.jpg" alt="Homoeopathy" class="service-image">
+                <div class="service-content">
+                    <p>Homoeopathy is a natural form of medicine based on the principle of "like cures like." It uses highly diluted substances to trigger the body's natural system of healing. Our clinic specializes in using homoeopathic remedies to treat various mental health conditions. These remedies are personalized for each patient, addressing the root cause of symptoms rather than just masking them. By promoting the body's inherent ability to heal, homoeopathy offers a gentle yet effective treatment option, especially for those who seek a holistic approach to mental well-being.</p>
+                </div>
+            </div>
+             <h3>Psychiatry</h3>
+            <div class="service-section">
+                <img src="https://i.pinimg.com/736x/03/96/98/039698af985b4249acdf8e4f41b5a994.jpg" alt="Psychiatry" class="service-image">
+                <div class="service-content">
+                    <p>Our psychiatric services focus on diagnosing, treating, and preventing mental, emotional, and behavioral disorders. We combine traditional psychiatric approaches with homoeopathic treatments to provide comprehensive care for our patients. With a thorough assessment of each individual’s mental health, we tailor personalized treatment plans that may include psychotherapy, medication, and lifestyle modifications. Our goal is not only to manage symptoms but to enhance overall mental wellness, ensuring our patients regain a healthy balance in their lives.</p>
+                </div>
+            </div>
+        </section>
+       <section id="reviews">
+            <h2>Patient Reviews</h2>
+           <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          <div class="elfsight-app-ac9ddc93-bccd-4667-9dc5-9b6147b56f60" data-elfsight-app-lazy></div>
+        </section>
+      <section id="appointment">
+        <h2>Book an Appointment</h2>
+        <img src="https://w7.pngwing.com/pngs/34/138/png-transparent-schedule-date-day-reminder-appointment-add-reminder-3d-icon-thumbnail.png" alt="Appointment Icon">
+        <div class="appointment-buttons">
+            <a href="https://archit7098.github.io/appointment/" class="appointment-button book-appointment">Book Appointment</a>
+            <a href="https://archit7098.github.io/appointment/" class="appointment-button tele-consultation">TELE CONSULTATION AVAILABLE</a>
+        </div>
+   </section>
+      <section id="address">
+        <h2>Our Location</h2>
+        <p>Visit us at our clinic:</p>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14886.273309262215!2d73.1048201!3d21.1297694!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e851ffbf4d89b%3A0xfd0da8e7b29fa16c!2sDr.%20Archit%20Mehta!5e0!3m2!1sen!2sin!4v1725539559947!5m2!1sen!2sin" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+    </section>
+    
+    <section id="mental-health-articles">
+            <h2>Mental Health and Homoeopathy Resources</h2>
+            <p>Explore our collection of articles and resources on mental health. Stay informed and learn how to take care of your mental well-being.</p>
+            
+            <div class="article-grid">
+                <div class="article-card">
+                    <h3>Understanding and Managing Anxiety</h3>
+                    <img src="https://w7.pngwing.com/pngs/852/736/png-transparent-smiley-anxiety-rupture-miscellaneous-face-hand-thumbnail.png" alt="Person experiencing anxiety">
+                    <p>Anxiety is a common mental health concern that affects millions worldwide. Learn about its symptoms, causes, and helpful non-medicinal tips to manage anxiety.</p>
+                    <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+                    <div class="article-content">
+                        <p>Anxiety manifests in various forms, from generalized anxiety disorder to specific phobias. Common symptoms include:</p>
+                        <ul>
+                            <li>Excessive worry</li>
+                            <li>Restlessness</li>
+                            <li>Difficulty concentrating</li>
+                            <li>Sleep disturbances</li>
+                        </ul>
+                        <p>Some helpful tips include: </p>
+                        <UL>
+                          <li>practicing mindfulness.</li>
+                          <li>regular physical activity</li>
+                          <li>regular physical activity</li>
+                        </UL>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>Holistic Approaches to Depression</h3>
+                    <img src="https://w7.pngwing.com/pngs/660/127/png-transparent-depression-major-depressive-disorder-bipolar-disorder-schizophrenia-depressed-miscellaneous-cartoon-fictional-character-thumbnail.png" alt="Person dealing with depression">
+                    <p>Depression is more than just feeling sad. Discover holistic approaches to managing depression and improving overall well-being.</p>
+                    <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+                    <div class="article-content">
+                        <p>Depression affects both mental and physical health. Some key signs include:</p>
+                        <ul>
+                            <li>Persistent sadness or emptiness</li>
+                            <li>Loss of interest in activities</li>
+                            <li>Changes in appetite or weight</li>
+                            <li>Fatigue and low energy</li>
+                        </ul>
+                        <p>Alongside treatment, lifestyle changes like regular exercise, a balanced diet, and stress-reduction techniques can significantly improve outcomes.</p>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>Effective Stress Management Techniques</h3>
+                    <img src="https://w7.pngwing.com/pngs/149/409/png-transparent-psychological-stress-stress-management-stay-fit-miscellaneous-text-cartoon-thumbnail.png" alt="Person practicing stress management techniques">
+                    <p>Chronic stress can have severe impacts on mental and physical health. Learn about stress management techniques and how to alleviate stress effectively.</p>
+                    <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+                    <div class="article-content">
+                        <p>Managing stress is crucial for maintaining good mental health. Here are some effective techniques:</p>
+                        <ul>
+                            <li>Mindfulness meditation</li>
+                            <li>Regular physical exercise</li>
+                            <li>Adequate sleep and nutrition</li>
+                            <li>Time management and prioritization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>Understanding Sleep Disorders</h3>
+                    <img src="https://w7.pngwing.com/pngs/675/751/png-transparent-delayed-sleep-phase-disorder-insomnia-night-ache-woman-sleep-foot-sleep-material-thumbnail.png" alt="Person suffering from sleep disorders">
+                    <p>Sleep disorders can severely impact your daily life. Learn about common sleep disorders and how to manage them.</p>
+                    <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+                    <div class="article-content">
+                        <p>Common sleep disorders include insomnia, sleep apnea, and restless leg syndrome. Symptoms can include difficulty falling asleep, frequent waking during the night, and feeling tired despite a full night's sleep.</p>
+                        <p>Maintaining a regular sleep schedule, creating a comfortable sleep environment, and limiting caffeine intake can help improve sleep quality.</p>
+                    </div>
+                </div>
+
+                <div class="article-card">
+                    <h3>Child Psychiatry: Understanding Children's Mental Health</h3>
+                    <img src="https://w7.pngwing.com/pngs/338/825/png-transparent-anxiety-emotion-developmental-disability-major-depressive-disorder-psychiatry-huf-love-child-face-thumbnail.png" alt="Child psychiatry concept">
+                    <p>Child psychiatry plays a crucial role in identifying and managing mental health challenges in children. Discover common childhood disorders and non-medicinal tips to help manage them.</p>
+                    <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+                    <div class="article-content">
+                        <p>Common childhood mental health conditions include ADHD, anxiety, and behavioral disorders. Early intervention and creating a supportive environment at home and school are key to managing these conditions.</p>
+                        <p>Engaging children in regular physical activities, ensuring they have a proper sleep routine, and teaching coping mechanisms like mindfulness can greatly benefit their mental well-being.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+       
+    <section id="publications">
+    <h2>Publications</h2>
+    <p>Explore Dr. Archit K. Mehta's published articles on homeopathy and mental health:</p>
+    
+    <div class="article-grid">
+        <div class="article-card">
+            <h3>Alcoholism And Homoeopathic Therapeutics</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOulxulzEtlSKRLEoFSD6Jjf_sEehakXwyQA&s">
+            <p>An in-depth exploration of homeopathic approaches to treating alcoholism, discussing various remedies and their applications.</p>
+            <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+            <div class="article-content">
+                <p>This article delves into the complex issue of alcoholism and how homeopathy can play a role in treatment. Key points include:</p>
+                <ul>
+                    <li>Understanding alcoholism from a homeopathic perspective</li>
+                    <li>Common remedies used in treating alcohol addiction</li>
+                    <li>Case studies and success stories</li>
+                    <li>Integrating homeopathy with conventional treatments</li>
+                </ul>
+                <a href="https://www.homeopathy360.com/alcoholism-and-homoeopathic-therapeutics/" target="_blank" class="external-link">Read Full Article</a>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <h3>Bedwetting: Know Your Child</h3>
+            <img src="https://cdn.sanity.io/images/n91gpxk2/production/869545fdbb1e84c053c00c77457d7c4acef01061-1028x754.png?rect=0,35,1028,685&w=1028&h=685&auto=format" alt="Child Bedwetting">
+            <p>A comprehensive guide to understanding and managing bedwetting in children using non-medicinal strategies and homeopathic approaches.</p>
+            <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+            <div class="article-content">
+                <p>This article provides valuable insights into childhood bedwetting, covering:</p>
+                <ul>
+                    <li>Common causes of bedwetting in children</li>
+                    <li>Non-medicinal management techniques</li>
+                    <li>Homeopathic remedies that may help</li>
+                    <li>When to seek professional help</li>
+                </ul>
+                <a href="https://www.homeopathy360.com/bedwetting-know-your-child-some-non-medicinal-managements/" target="_blank" class="external-link">Read Full Article</a>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <h3>Family Dynamics and Child Behavior</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlDl8zQYbv6V6eWhHsIVg1STttjKrDDuCLoA&s" alt="Family Dynamics">
+            <p>An exploration of how family dynamics and parenting styles influence a child's behavior, with insights from homeopathic psychology.</p>
+            <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+            <div class="article-content">
+                <p>This article examines the crucial relationship between family environment and child behavior, discussing:</p>
+                <ul>
+                    <li>Different parenting styles and their effects</li>
+                    <li>How family dynamics shape a child's personality</li>
+                    <li>Recognizing and addressing behavioral issues</li>
+                    <li>Homeopathic approaches to family and child psychology</li>
+                </ul>
+                <a href="https://www.homeopathy360.com/how-do-family-dynamics-and-parenting-affects-chlids-behaviour/" target="_blank" class="external-link">Read Full Article</a>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <h3>Sleep Normality: Tips for Healthy Sleep</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_kPxS5Mrgm6uERvdjdtEee8OwPMY2pWGoyg&s" alt="Healthy Sleep">
+            <p>A comprehensive guide to understanding sleep patterns and promoting healthy sleep habits, incorporating homeopathic wisdom.</p>
+            <a href="#" class="read-more" onclick="toggleArticle(this); return false;">Read More</a>
+            <div class="article-content">
+                <p>This article offers valuable insights into achieving better sleep quality, including:</p>
+                <ul>
+                    <li>Understanding normal sleep patterns</li>
+                    <li>Common sleep disorders and their symptoms</li>
+                    <li>Lifestyle changes for better sleep</li>
+                    <li>Homeopathic remedies for sleep issues</li>
+                </ul>
+                <a href="https://www.homeopathy360.com/sleep-normality-tips-for-inducing-healthy-sleep/" target="_blank" class="external-link">Read Full Article</a>
+            </div>
+        </div>
+    </div>
+</section>
+      
+    <section id="app">
+            <h2>Clinic App</h2>
+            <p>For a better experience, download and use our clinic's app for managing appointments, tracking your health, and accessing articles and videos.</p>
+            <a href="https://app.jotform.com/241303416856454" class="button">Go to Clinic App</a>
+    </section>
+        <section id= "closure">
+          <h2>Compassionate Care Beyond Boundaries</h2>
+          <p>Your mental health is important, and we are committed to offering care that transcends traditional boundaries. By integrating psychiatry with the healing potential of homoeopathy, we ensure a holistic treatment plan tailored to your unique needs. From personalized consultations to ongoing support, we are here to assist you in achieving mental peace and balance, no matter the challenges you face.</p>
+          
+    </section>
+    
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>We'd love to hear from you. Here's how you can reach us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="architmehta97@live.com">architmehta97@live.com</a></li>
+                <li><strong>Phone:</strong> +91 9408821101</li>
+                <li><strong>Address:</strong> 7, NATRAJ APPARTMENT,NEAR YASH EYE HOSPITAL, STATION ROAD, BARDOLI, SURAT, GUJARAT </li>
+            </ul>
+        </div>
+        
+   </section>
+ </main>
+    
+    <footer>
+        <p>&copy; 2024 Dr. Archit K. Mehta. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleArticle(link) {
+            const content = link.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                link.textContent = "Read More";
+            } else {
+                content.style.display = "block";
+                link.textContent = "Read Less";
+            }
+        }
+    </script>
+</body>
+</html>
