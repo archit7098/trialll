@@ -6,180 +6,167 @@
     <title>Dr. Archit K. Mehta - Homoeopathic Psychiatric Clinic</title>
      <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ff;
-        }
-        header, main, footer {
-            padding: 20px;
-        }
-        header {
-            background-color: #1e90ff;
-            color: white;
-            text-align: center;
-        }
-        nav {
-            background-color: #4169e1;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0000cd;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #00008b;
-        }
-        h2 {
-            color: #1e90ff;
-        }
-         
-         #appointment {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-            text-align: center;
-        }
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+header, main, footer {
+    padding: 20px;
+}
+header {
+    background-color: #1e90ff;
+    color: white;
+    text-align: center;
+}
+nav {
+    background-color: #4169e1;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0000cd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #00008b;
+}
+h2 {
+    color: #1e90ff;
+}
 
-        #appointment img {
-            max-width: 100%;
-            height: auto;
-            max-height: 150px;
-            margin-bottom: 15px;
-        }
+#appointment {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    text-align: center;
+}
 
-        .appointment-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
+.appointment-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
-        .appointment-button {
-            flex: 1;
-            padding: 15px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+.appointment-button {
+    flex: 1;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        .book-appointment {
-            background-color: #0000cd;
-            color: white;
-            margin-right: 10px;
-        }
+.book-appointment {
+    background-color: #0000cd;
+    color: white;
+    margin-right: 10px;
+}
 
-        .book-appointment:hover {
-            background-color: #00008b;
-        }
+.book-appointment:hover {
+    background-color: #00008b;
+}
 
-        .tele-consultation {
-            background-color: #1e90ff;
-            color: white;
-            margin-left: 10px;
-        }
+.tele-consultation {
+    background-color: #1e90ff;
+    color: white;
+    margin-left: 10px;
+}
 
-        .tele-consultation:hover {
-            background-color: #1c86ee;
-        }
+.tele-consultation:hover {
+    background-color: #1c86ee;
+}
 
-        @media (max-width: 768px) {
-            .appointment-buttons {
-                flex-direction: column;
-            }
+@media (max-width: 768px) {
+    .appointment-buttons {
+        flex-direction: column;
+    }
 
-            .appointment-button {
-                margin: 10px 0;
-            }
+    .appointment-button {
+        margin: 10px 0;
+    }
 
-            .book-appointment {
-                margin-right: 0;
-            }
+    .book-appointment {
+        margin-right: 0;
+    }
 
-            .tele-consultation {
-                margin-left: 0;
-            }
-        }
-        #address {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        #address a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        #address a:hover {
-            text-decoration: underline;
-        }
-        #mental-health-articles {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .article-card {
-            background-color: #f0f8ff;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        }
-        .article-card h3 {
-            color: #1e90ff;
-            margin-top: 0;
-        }
-        .article-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        .read-more {
-            display: inline-block;
-            margin-top: 10px;
-            color: #1e90ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .read-more:hover {
-            text-decoration: underline;
-        }
-        .article-content {
-            display: none;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #ccc;
-        }
-       #publications {
+    .tele-consultation {
+        margin-left: 0;
+    }
+}
+
+#address {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+#address a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+#address a:hover {
+    text-decoration: underline;
+}
+#mental-health-articles {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.article-card {
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.article-card h3 {
+    color: #1e90ff;
+    margin-top: 0;
+}
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
+.article-content {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
+#publications {
     padding: 20px;
     margin: 20px 0;
     background-color: white;
@@ -197,12 +184,6 @@
     text-align: center;
     color: #333;
     margin-bottom: 30px;
-}
-
-.article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
 }
 
 .article-card {
@@ -224,27 +205,9 @@
     margin-bottom: 15px;
 }
 
-.article-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
 .article-card > p {
     color: #333;
     margin-bottom: 15px;
-}
-
-.article-card .read-more {
-    color: #1e90ff;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.article-card .read-more:hover {
-    text-decoration: underline;
 }
 
 .article-content {
@@ -273,22 +236,50 @@
     background-color: #1a7ee0;
 }
 
+/* New and updated image-related styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.service-image {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#appointment img {
+    max-width: 100px;
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .article-grid {
         grid-template-columns: 1fr;
     }
-}
-
-function toggleArticle(element) {
-    var content = element.nextElementSibling;
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        element.textContent = "Read Less";
-    } else {
-        content.style.display = "none";
-        element.textContent = "Read More";
+    .service-image {
+        max-width: 100%;
     }
-}
 }
 
     </style>
