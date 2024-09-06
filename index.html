@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Archit K. Mehta - Homoeopathic Psychiatric Clinic</title>
      <style>
-        body {
+        /* Global styles */
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -19,7 +20,19 @@ header {
     background-color: #1e90ff;
     color: white;
     text-align: center;
+    padding: 20px;
+    position: relative;
 }
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
 nav {
     background-color: #4169e1;
     color: white;
@@ -49,6 +62,7 @@ h2 {
     color: #1e90ff;
 }
 
+/* Appointment Section */
 #appointment {
     background-color: white;
     padding: 20px;
@@ -57,13 +71,11 @@ h2 {
     margin-top: 20px;
     text-align: center;
 }
-
 .appointment-buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
-
 .appointment-button {
     flex: 1;
     padding: 15px;
@@ -75,45 +87,80 @@ h2 {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-
 .book-appointment {
     background-color: #0000cd;
     color: white;
     margin-right: 10px;
 }
-
 .book-appointment:hover {
     background-color: #00008b;
 }
-
 .tele-consultation {
     background-color: #1e90ff;
     color: white;
     margin-left: 10px;
 }
-
 .tele-consultation:hover {
     background-color: #1c86ee;
 }
-
 @media (max-width: 768px) {
     .appointment-buttons {
         flex-direction: column;
     }
-
     .appointment-button {
         margin: 10px 0;
     }
-
     .book-appointment {
         margin-right: 0;
     }
-
     .tele-consultation {
         margin-left: 0;
     }
 }
 
+/* Dynamic Image Sizing */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Service Section Highlighting */
+.service-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    text-align: center;
+}
+.service-section h3 {
+    color: #1e90ff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Highlighting Homeopathy and Psychiatry */
+.service-section .highlight-homeopathy,
+.service-section .highlight-psychiatry {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+.service-section .highlight-homeopathy:hover,
+.service-section .highlight-psychiatry:hover {
+    background-color: #d1e7ff;
+}
+.service-section .highlight-homeopathy h3,
+.service-section .highlight-psychiatry h3 {
+    color: #1e90ff;
+}
+
+/* Address Section */
 #address {
     background-color: white;
     padding: 20px;
@@ -128,6 +175,8 @@ h2 {
 #address a:hover {
     text-decoration: underline;
 }
+
+/* Articles Section */
 #mental-health-articles {
     background-color: white;
     padding: 20px;
@@ -145,6 +194,11 @@ h2 {
     border-radius: 5px;
     padding: 15px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 .article-card h3 {
     color: #1e90ff;
@@ -160,12 +214,8 @@ h2 {
 .read-more:hover {
     text-decoration: underline;
 }
-.article-content {
-    display: none;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #ccc;
-}
+
+/* Publications Section */
 #publications {
     padding: 20px;
     margin: 20px 0;
@@ -173,113 +223,15 @@ h2 {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 #publications h2 {
     color: #1e90ff;
     text-align: center;
     margin-bottom: 20px;
 }
-
 #publications > p {
     text-align: center;
     color: #333;
     margin-bottom: 30px;
-}
-
-.article-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.article-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.article-card h3 {
-    color: #1e90ff;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.article-card > p {
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.article-content {
-    display: none;
-    margin-top: 15px;
-    border-top: 1px solid #ddd;
-    padding-top: 15px;
-}
-
-.article-content ul {
-    padding-left: 20px;
-    margin-bottom: 15px;
-}
-
-.article-content .external-link {
-    display: inline-block;
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.article-content .external-link:hover {
-    background-color: #1a7ee0;
-}
-
-/* New and updated image-related styles */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-header img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.service-image {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.article-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-#appointment img {
-    max-width: 100px;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    .article-grid {
-        grid-template-columns: 1fr;
-    }
-    .service-image {
-        max-width: 100%;
-    }
 }
 
     </style>
