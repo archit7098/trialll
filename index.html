@@ -24,7 +24,7 @@
          
 
         header {
-            background-color: #126180;
+            background-color: #5D8AA8;
             color: white;
             text-align: center;
             padding: 2rem 1rem;
@@ -200,35 +200,31 @@ padding-top: 20px;        }
             margin-bottom: 1rem;
         }
 
-        .appointment-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
+       .appointment-buttons {
+    display: block; /* Change from flex to block to allow full-width buttons */
+    margin-top: 1rem;
+    text-align: center; /* Center the buttons within the container */
+}
 
-        .appointment-button {
-            flex: 1;
-            min-width: 200px;
-            padding: 0.75rem 1rem;
-            font-size: 1rem;
-            font-weight: bold;
-            text-align: center;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+.appointment-button {
+    width: 100%; /* Occupy full width */
+    display: inline-block;
+    margin: 0.5rem auto; /* Center the button and add spacing */
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        .book-appointment {
-            background-color: #0000cd;
-            color: white;
-        }
-
-        .tele-consultation {
-            background-color: #1e90ff;
-            color: white;
-        }
+.book-appointment {
+    background-color: #041E42;
+    color: white;
+}
+       
         #address {
     background-color: white;
     padding: 20px;
@@ -326,7 +322,7 @@ padding-top: 20px;        }
                 </div>
                 <div class="card-body">
                     <p>Schedule your visit or tele-consultation with Dr. Mehta.</p>
-                    <button class="card-button" onclick="toggleSection('appointment')" aria-label="Book an appointment">Book Now</button>
+           <a  href="https://archit7098.github.io/appointment/" class="appointment-button book-appointment">Book Appointment </a>
                 </div>
             </div>
             
